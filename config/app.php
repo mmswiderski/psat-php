@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pl',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'pl',
 
     /*
     |--------------------------------------------------------------------------
@@ -90,9 +90,9 @@ return [
     | will not be safe. Please do this before deploying an application!
     |
     */
-
-    'key' => env('APP_KEY'),
-
+    //FcBd5VXmGoga3G6jm3FqeuMKNH8ljmM9
+    //domyślna wartośc z configu 'key' => 'FcBd5VXmGoga3G6jm3FqeuMKNH8ljmM9',
+    'key' => env('APP_KEY', 'FcBd5VXmGoga3G6jm3FqeuMKNH8ljmM9'),
     'cipher' => 'AES-256-CBC',
 
     /*
@@ -147,7 +147,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
         /*
          * Application Service Providers...
          */
@@ -158,6 +157,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         App\Providers\ValidateExtServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class
     ],
 
     /*
@@ -203,6 +203,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 
