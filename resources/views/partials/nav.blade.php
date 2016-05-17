@@ -14,6 +14,8 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{ route('books-home') }}">Strona główna</a></li>
                 <li><a href="{{ route('books-about')  }}">O nas</a></li>
+                <li><a href="{{ route('books-authors')  }}">Autorzy</a></li>
+                <li><a href="{{ route('books-to-authors')  }}">Książki-Autorzy</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

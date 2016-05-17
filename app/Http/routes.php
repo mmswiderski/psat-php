@@ -57,6 +57,16 @@ Route::group(['middleware' => ['web']], function () {
         'uses' => 'BooksController@about'
     ]);
 
+    Route::get('/authors', [
+        'as' => 'books-authors',
+        'uses' => 'BooksController@authors'
+    ]);
+
+    Route::get('/booktoauthors', [
+        'as' => 'books-to-authors',
+        'uses' => 'BooksController@bookToAuthors'
+    ]);
+    
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
