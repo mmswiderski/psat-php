@@ -24,7 +24,3 @@
         </tbody>
     </table>
 @stop
-
-@section('footer')
-    Copyrights &copy; by psat Development Team: ...
-@stop
