@@ -36,28 +36,37 @@ App::bind('\Psat\CurrenciesApi', '\Psat\Nbp');
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/convert', [
+//    Route::get('/convert', [
+//        'as' => 'home',
+//        'uses' => 'PagesController@mainPage'
+//    ]);
+//    Route::post('/convert', 'PagesController@convert');
+//
+//    Route::get('/solid', [
+//        'as' => 'solid',
+//        'uses' => 'PagesController@solid'
+//    ]);
+//
+//    Route::get('/', [
+//        'as' => 'books-home',
+//        'uses' => 'BooksController@index'
+//    ]);
+//
+//    Route::get('/about', [
+//        'as' => 'books-about',
+//        'uses' => 'BooksController@about'
+//    ]);
+
+    //Route::auth();
+
+//    Route::get('/home', 'HomeController@index');
+    Route::get('/login', [
+        'as' => 'login-form',
+        'uses' =>'SentinelController@showLoginForm'
+    ]);
+    Route::post('/login', 'SentinelController@login');
+    Route::get('/home', [
         'as' => 'home',
-        'uses' => 'PagesController@mainPage'
+        'uses' =>'HomeController@index'
     ]);
-    Route::post('/convert', 'PagesController@convert');
-
-    Route::get('/solid', [
-        'as' => 'solid',
-        'uses' => 'PagesController@solid'
-    ]);
-
-    Route::get('/', [
-        'as' => 'books-home',
-        'uses' => 'BooksController@index'
-    ]);
-
-    Route::get('/about', [
-        'as' => 'books-about',
-        'uses' => 'BooksController@about'
-    ]);
-
-    Route::auth();
-
-    Route::get('/home', 'HomeController@index');
 });
