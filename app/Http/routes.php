@@ -65,8 +65,13 @@ Route::group(['middleware' => ['web']], function () {
         'uses' =>'SentinelController@showLoginForm'
     ]);
     Route::post('/login', 'SentinelController@login');
+
     Route::get('/home', [
         'as' => 'home',
         'uses' =>'HomeController@index'
     ]);
+
+//    Route::delete('/login', function() {
+//        dd('zpytanie typu DELETE');
+//    });
 });
